@@ -1,1 +1,22 @@
+{
+  "timestamp": "2024-09-18T14:32:00Z",
+  "source_ip": "192.168.1.150",
+  "destination_ip": "203.0.113.50",
+  "protocol": "TCP",
+  "event": "Connection to known PupyRAT C2 server",
+  "process_command_line": "powershell.exe -ExecutionPolicy Bypass -File C:\\Users\\Public\\malicious.ps1",
+  "event_id": "4624",
+  "user": "admin"
+}
+
+{
+  "timestamp": "2024-09-18T14:35:00Z",
+  "source_ip": "192.168.1.150",
+  "destination_ip": "203.0.113.50",
+  "protocol": "TCP",
+  "event": "Reverse shell activity detected",
+  "process_command_line": "cmd.exe /c whoami",
+  "event_id": "4688",
+  "user": "admin"
+}
 
