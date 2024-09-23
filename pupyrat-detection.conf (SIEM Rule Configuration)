@@ -1,0 +1,33 @@
+# Rule to detect potential PupyRAT infection based on known IoCs
+# Add this to your SIEM correlation rules configuration
+
+{
+  "rule": {
+    "name": "PupyRAT Infection Detection",
+    "type": "query",
+    "description": "Detects known behaviors of PupyRAT such as C2 server connections, remote access commands, etc.",
+    "conditions": [
+      {
+        "field": "source_ip",
+        "operator": "in",
+        "value": ["192.168.1.100", "203.0.113.50"]  # Replace with known C2 server IPs
+      },
+      {
+        "field": "process_command_line",
+        "operator": "contains",
+        "value": "powershell.exe -ExecutionPolicy Bypass"  # PupyRAT often uses PowerShell
+      }
+    ],
+    "actions": [
+      {
+        "alert": {
+          "email": {
+            "recipients": ["secops@company.com"],
+            "subject": "PupyRAT Infection Detected",
+            "body": "A possible PupyRAT infection has been detected based on suspicious activity."
+          }
+        }
+      }
+    ]
+  }
+}
