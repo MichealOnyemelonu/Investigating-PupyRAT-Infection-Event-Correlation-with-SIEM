@@ -1,0 +1,5 @@
+This image showcases how the detected PupyRAT activity is visualized in Kibana. You can create a dashboard showing metrics such as:
+
+Number of PupyRAT detections.
+Source and destination IPs involved in the infection.
+Commands executed by the malware.
