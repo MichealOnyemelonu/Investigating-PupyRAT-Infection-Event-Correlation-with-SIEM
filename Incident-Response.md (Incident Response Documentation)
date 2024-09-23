@@ -1,0 +1,24 @@
+# Incident Response Plan: PupyRAT Detection
+
+## Step 1: Detection
+- PupyRAT infection detected via SIEM alerts (triggered by correlation rules).
+- Immediate action: Notify the security team and initiate incident response.
+
+## Step 2: Containment
+- Isolate the infected machine from the network.
+- Disable any suspicious processes (e.g., PowerShell or reverse shell activity).
+- Block known malicious IP addresses (C2 servers) at the firewall.
+
+## Step 3: Eradication
+- Remove all PupyRAT-related files from the infected system.
+- Reimage the machine to ensure no malware remnants remain.
+- Patch any vulnerabilities that may have led to the infection.
+
+## Step 4: Recovery
+- Restore the machine from a clean backup.
+- Monitor network traffic for signs of re-infection or lateral movement.
+
+## Step 5: Lessons Learned
+- Conduct a post-incident analysis.
+- Update SIEM rules to improve detection for future infections.
+- Provide training to employees on phishing and other infection vectors.
